@@ -6,6 +6,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=4
+#SBATCH -A bdlan08
 
 # 加载conda环境
 source ~/.bashrc
