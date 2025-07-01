@@ -1,7 +1,8 @@
 name: TTC
 channels:
-  - defaults
   - conda-forge
+  - defaults
+ 
 dependencies:
   - python=3.11.11
   - numpy
