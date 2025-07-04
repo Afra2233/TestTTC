@@ -185,13 +185,13 @@ def load_val_dataset(args, val_dataset_name):
         val_dataset = CIFAR100(args.root, transform=preprocess224, download=True, train=False)
 
     elif val_dataset_name == 'Caltech101':
-        val_dataset = caltech.Caltech101(args.root, target_type='category', transform=preprocess224_caltech, download=True)
+        val_dataset = caltech.Caltech101(args.root, target_type='category', transform=preprocess224_caltech, download=False)
 
     elif val_dataset_name == 'PCAM':
         val_dataset = pcam.PCAM(args.root, split='test', transform=preprocess224, download=True)
 
     elif val_dataset_name == 'STL10':
-        val_dataset = STL10(args.root, split='test', transform=preprocess224, download=True)
+        val_dataset = STL10(args.root, split='test', transform=preprocess224, download=False)
 
     elif val_dataset_name == 'SUN397':
         val_dataset = sun397.SUN397(args.root, transform=preprocess224, download=True)
