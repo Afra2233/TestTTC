@@ -185,7 +185,7 @@ def load_val_dataset(args, val_dataset_name):
         val_dataset = CIFAR100(args.root, transform=preprocess224, download=True, train=False)
 
     elif val_dataset_name == 'Caltech101':
-        val_dataset = caltech.Caltech101(args.root, target_type='category', transform=preprocess224_caltech, download=False)
+        val_dataset = caltech.Caltech101(args.root, target_type='category', transform=preprocess224_caltech, download=True)
 
     elif val_dataset_name == 'PCAM':
         val_dataset = pcam.PCAM(args.root, split='test', transform=preprocess224, download=True)
