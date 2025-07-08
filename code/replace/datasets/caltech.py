@@ -91,11 +91,11 @@ class Caltech101(VisionDataset):
             os.path.join(
                 self.root,
                 "101_ObjectCategories",
-                # self.categories[self.y[index]],
-                self.categories[self.y[index]].replace(' ', '_'),
+                self.categories[self.y[index]],
                 f"image_{self.index[index]:04d}.jpg",
             )
-        ).convert("RGB")
+        )
+
         target: Any = []
         for t in self.target_type:
             if t == "category":
@@ -223,7 +223,7 @@ class Caltech256(VisionDataset):
                 self.categories[self.y[index]],
                 f"{self.y[index] + 1:03d}_{self.index[index]:04d}.jpg",
             )
-        ).convert("RGB")
+        )
 
         target = self.y[index]
 

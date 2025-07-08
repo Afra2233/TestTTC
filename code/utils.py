@@ -209,7 +209,7 @@ def load_val_dataset(args, val_dataset_name):
         val_dataset = eurosat.EuroSAT(args.root, transform=preprocess224, download=True)
 
     elif val_dataset_name == 'Caltech256':
-        val_dataset = caltech.Caltech256(args.root, transform=preprocess224_caltech, download=True)
+        val_dataset = caltech.Caltech256(args.root, transform=preprocess224_caltech, download=False)
 
     elif val_dataset_name == 'flowers102':
         val_dataset = flowers102.Flowers102(args.root, split='test', transform=preprocess224, download=True)
